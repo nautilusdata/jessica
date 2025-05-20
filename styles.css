@@ -1,0 +1,783 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --padding-container: 100px 0;
+  --color-title: #001A49; /* Manteniendo el azul oscuro para títulos */
+  --color-pastel-accent: #a7c957; /* Verde pastel */
+  --color-pastel-secondary: #f2e9e4; /* Beige claro */
+  --color-pastel-button: #aad4cf; /* Azul verdoso pastel */
+  --color-pastel-background: #f9f9f9; /* Gris muy claro para fondos de sección */
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #fff; /* Fondo blanco principal */
+}
+
+a{
+  text-decoration: none;
+  color: var(--color-pastel-accent); /* Verde pastel para enlaces */
+}
+
+
+/* Estilos generales para el encabezado */
+.header {
+  display: flex;
+  min-height: 40px;
+  max-height: 150px;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: rgb(6, 7, 66);
+}
+
+.header-left {
+  flex: 1;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.header-center img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+}
+
+.header-right {
+  flex: 1;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* Estilos generales del encabezado (sin cambios) */
+.header {
+  display: flex;
+  min-height: 40px;
+  max-height: 150px;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: rgb(6, 7, 66);
+}
+
+.header-left {
+  flex: 1;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.header-center img {
+  max-width: 100%;
+  height: auto;
+  max-height: 250px;
+}
+
+.header-right {
+  flex: 1;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/* Media query para pantallas de hasta 768px de ancho (móviles y tablets) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Mantenemos la dirección de columna */
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Reducimos el padding general */
+    min-height: auto;
+    max-height: none;
+    justify-content: space-around; /* Distribuimos el espacio vertical */
+  }
+
+  .header-left {
+    font-size: 1.2em;
+  }
+
+  .header-center img {
+    max-height: 200px;
+  }
+
+  .header-right {
+    font-size: 1.2em;
+  }
+}
+
+/* Media query para pantallas aún más pequeñas (móviles pequeños) */
+@media (max-width: 480px) {
+  .header-left {
+    font-size: 1em;
+  }
+
+  .header-right {
+    font-size: 1em;
+  }
+
+  .header-center img {
+    max-height: 150px;
+  }
+}
+
+
+/*Estilos */
+
+.banner{
+  position: relative;
+  width:100%;
+  height: calc(80vh - 50px); /* achica por abajo la foto del hero/banner */
+  background-color:#F5F5F5;
+  background-size: cover;
+  background-position: center;
+  transition: all .1s ease-in-out;
+  background-image: url('./images/01.jpg');
+  animation: banner 24s infinite linear;
+}
+
+.banner-content{
+  margin:0;
+  padding:0;
+  width: 100%; /*100% abarca todo el contenedor principal clase .banner*/
+  height: 190%;/*Letras abajo*/
+  color: var(--color-pastel-accent); /* Verde pastel para el texto del banner */
+  background-color: rgba(74, 87, 76,0.1); /*Ajuste de imágenes HERO*/
+  display: flex; /*banner content se comportará tipo flex*/
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-content h1{
+  margin:0;
+  padding:0;
+  padding-bottom: 30px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.banner-content a{
+  text-decoration: none;
+  color:#FFF;
+  padding:9px 20px;
+  border: 1px solid #FFF;
+  text-transform: uppercase ;
+  transition: all .9s ease-in-out;
+}
+
+.banner-content a:hover{
+  background-color: #FFF;
+  color: #333;
+}
+
+/* Fotos loop Hero */
+@keyframes banner{
+  0%{
+    background-image: url('./images/01.jpg');
+  }
+  25%{
+    background-image: url('./images/01.jpg');
+  }
+  26%{
+    background-image: url('./images/15.jpg');
+  }
+  50%{
+    background-image: url('./images/15.jpg');
+  }
+  51%{
+    background-image: url('./images/01.jpg');
+  }
+  75%{
+    background-image: url('./images/01.jpg');
+  }
+  76%{
+    background-image: url('./images/13.jpg');
+  }
+  100%{
+    background-image: url('./images/13.jpg');
+  }
+}
+
+
+/*Botón verde reciclable */
+.cta {
+  display: inline-block;
+  background-color: var(--color-pastel-accent); /* Verde pastel para el botón */
+  justify-self: center; /*centrado botón Comienza ahora*/
+  color:#ffffff;
+  text-decoration: none;
+  padding:13px 30px;
+  border-radius: 32px;
+}
+
+/*estructura default que respeta espacios*/
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: var(--padding-container);
+}
+
+
+/* MAIN (3 textos y 3 iconos fluidos)*/
+
+.about {
+  text-align: center;
+  margin-top: -40px;
+}
+
+.subtitle {
+  color: var(--color-title);
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+.about__paragraph {
+  line-height: 1.7; /*separación líneastexto descriptivo 3 items flotantes*/
+}
+
+.about__main {
+  padding-top: 80px;
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1em;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto)); /*auto pasa pa bajo*/
+}
+
+.about__icons {
+  display:grid;
+  gap:1em;
+  justify-items: center;
+  width: 260px;
+  overflow: hidden;
+  margin:0 auto;
+}
+
+.about__icon {
+  width: 40px;
+}
+
+
+/* KNOWLEDGE */
+/* https://www.magicpattern.design/tools/css-backgrounds */
+.knowledge {
+  background-color: var(--color-pastel-background); /* Gris muy claro pastel */
+  opacity: 0.8;
+  background-image: radial-gradient(var(--color-pastel-accent) 0.2px, transparent 0.1px), radial-gradient(#444cf7 0.5px, var(--color-pastel-secondary) 0.5px); /* Verde pastel y beige */
+  background-size: 20px 20px;
+  background-position: 0 0,10px 10px;
+  /*agregado*/
+  overflow: hidden;
+}
+
+
+/* knowledge container es el contenedor de TODO en la sección de knowledge */
+.knowledge__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  align-items: center;
+}
+
+
+.knowledge__picture {
+  max-width: 500px;
+}
+
+
+.knowledge__paragraph {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+
+.knowledge__img {
+  width: 100%;
+  display: block;
+}
+
+
+/* PRECIOS  */
+.price {
+  text-align: center;
+}
+
+
+.price__table {
+  padding-top: 10px; /*separación entre título y promociones en línea*/
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5em; /*separación entre promociones. Flexbox permite usar gap, ojo con grid 93%*/
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.price__element {
+  background-color: var(--color-pastel-secondary); /* Beige claro pastel */
+  text-align: center;
+  border-radius: 10px;
+  width: 330px;
+  padding: 40px;
+  --color-plan: #696871;
+  --color-price: #1D293F;
+  --bg-cta: #fff;
+  --color-cta: var(--color-pastel-accent); /* Verde pastel para el texto del botón */
+  --color-items: #696871;
+}
+
+
+.price__element--best {
+  width: 370px;
+  padding: 60px 40px;
+  background-color: var(--color-pastel-accent); /* Verde pastel para el mejor plan */
+
+  --color-plan: rgb(255 255 255 / 75%);
+  --color-price: #fff;
+  --bg-cta: #8ac926; /* Un tono más oscuro del verde pastel */
+  --color-cta: #fff;
+  --color-items: #fff;
+}
+
+
+.price_name {
+  color: var(--color-plan);
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+
+.price__price {
+  font-size: 2.5rem;
+  color: var(--color-price);
+}
+
+
+.price__items {
+  margin-top: 35px;
+  display: grid;
+  gap: 1em;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  color: var(--color-items);
+}
+
+
+.price__cta {
+  display: block;
+  padding: 20px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: var(--bg-cta);
+  font-weight: 600;
+  color: var(--color-cta);
+  box-shadow: 0 0 1px rgba(0,0,0,.5);
+}
+
+
+/* HORARIOS  */
+
+
+.horarios {
+  background-color: var(--color-pastel-background); /* Gris muy claro pastel */
+  text-align: center;
+  flex: 1;
+}
+
+.horarios__texts {
+  text-align: center;
+  flex:1;
+}
+
+
+
+
+/* PREGUNTAS */
+
+.questions {
+  text-align: center;
+}
+
+
+.questions__container {
+  display:grid;
+  gap: 2em;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
+
+.questions__padding {
+  padding:0 ;
+  transition: padding .2s;
+  border: 1px solid var(--color-pastel-accent); /* Verde pastel para el borde */
+  border-radius: 6px;
+}
+
+
+.questions__padding--add {
+  padding-bottom: 30px;
+}
+
+.questions__answer {
+  padding: 0 30px 0;
+  overflow: hidden; /*desaparece el texto del drop down*/
+
+}
+
+
+.questions__title {
+  text-align: left;;
+  display: flex;
+  font-size: 20px;
+  padding: 30px 0 30px;
+  cursor:pointer;
+  color: var(--color-title);
+  justify-content: space-between;;
+}
+
+
+.questions__arrow {
+  border-radius: 50%;
+  background-color: var(--color-title);
+  width:25px;
+  height:25px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  align-self: flex-end;
+  margin-left: 10px;
+  transition: transform .9s;
+}
+
+
+.questions__arrow--rotate {
+  transform: rotate(180deg);
+}
+
+
+.questions__show {
+  text-align: left;
+  height: 0;
+  transition: height .3s;
+}
+
+
+.questions__img {
+  display: block;
+}
+
+.questions__copy {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.questions__offer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+
+/* footer */
+
+.footer {
+  background-color: var(--color-pastel-secondary); /* Beige claro pastel */
+}
+
+.footer__title {
+  font-weight: 300;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.footer__title, .footer__newsletter {
+  color:#020202;
+}
+
+.footer__container {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 60px;
+}
+
+.nav--footer {
+  padding-bottom: 20px;
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: row;
+  height:100%;
+}
+
+.nav__link--footer { /*Flex para desbordar el menú, pero no está en esta página*/
+  display: flex;
+  margin: 0;
+  margin-right: 20px;
+  flex-wrap: wrap;
+}
+
+.footer__inputs {
+  margin-top: 20px;
+  display: flex;
+  overflow: hidden;
+}
+
+.footer__input { /*Hijo de .footer__inputs. (Este es el espacio para ingresar email) */
+  background-color: #fff;
+  height:50px;
+  display:block;
+  padding-left: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  margin-right: 16px;
+}
+
+.footer__submit { /*botón Registro*/
+  margin-left: auto;
+  display: inline-block;
+  height: 50px;
+  padding: 0 20px;
+  background-color: var(--color-pastel-accent); /* Verde pastel para el botón */
+  border: none;
+  font-size: 1rem;
+  color:#fff;
+  border-radius: 6px;
+}
+
+.footer__copy{
+  --padding-container:30px 0;
+  text-align: center;
+  color:#ffffff;
+
+}
+
+.footer__copyright {
+  color: var(--color-title); /* Usando la variable de color definida */
+  font-size: 0.8em; /* Un tamaño de fuente más pequeño es común para el copyright */
+  /* Otros estilos que desees aplicar al texto del copyright */
+}
+
+.footer__icons{
+  display: inline-flex;
+  margin-bottom: 10px;
+
+}
+
+.footer__img{
+  width:30px;
+  filter: invert(100%) hue-rotate(180deg); /*color negro iconos rss*/
+
+}
+
+
+
+
+
+@media (max-width:800px){
+
+  .banner{
+    width:100%;
+    height: calc(50vh - 0px);
+    background-color:#fff;
+    background-position: 50% 50%;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .about__main {
+    gap:2em;
+  }
+
+  .about__icons:last-of-type {
+    grid-column: 1/-1;
+  }
+
+  .knowledge__container{
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    gap: 3em;
+    text-align: center;
+  }
+
+  .knowledge__picture{
+    grid-row: 1/2;
+    justify-self: center;
+  }
+
+   .testimony__container{
+    grid-template-columns: 30px 1fr 30px;
+  }
+
+  .testimony__body{
+    grid-template-columns: 1fr;
+    /*a continuación dos filas con máx. contendio cada una*/
+    grid-template-rows: max-content max-content;
+    gap: 3em;
+    justify-items: center
+  }
+
+  .questions__copy{
+    width:90%;
+  }
+
+  .footer__container{
+    flex-wrap: wrap;
+  }
+
+  .nav--footer{
+    width: 100%;
+    justify-items: center;
+  }
+
+  .nav__link--footer{
+    width: 100%;
+    justify-content: space-evenly;
+    margin:0; /*quitamos el margen*/
+  }
+
+  .footer__form{
+    width:100%;
+    justify-content: space-evenly;
+  }
+
+  .footer__input{
+    flex:1;
+  }
+}
+
+
+
+
+
+@media (max-width:600px) {  
+
+  .banner{
+    width:100%;
+    height: calc(50vh - 0px);
+    background-color:#fff;
+    background-position: 50% 50%;
+  }
+
+  .hero__title{
+    font-size: 2rem;;
+  }
+
+  .subtitle{
+    font-size: 90%;
+  }
+
+  .price__element{
+    width: 90%;
+  }
+
+  .price__element--best{
+    width:90%;
+  }
+
+  .price__price{
+    width:90%;
+  }  
+
+  .testimony{
+    --padding-container: 60px 0;/*60px arriba y abajo en el testimony*/
+  }
+  .testimony__container{
+    grid-template-columns: 28px 1fr 28px;
+    gap: .9em;
+  }
+
+  .testimony__arrow{
+    width:100%;
+  }
+
+  .testimony__course{
+    margin-top:15px;
+  }
+
+  .questions__title{
+    font-size: 1rem;;
+  }
+
+   .nav--footer{
+    padding:0;
+  }
+
+  .nav__link--footer{
+    justify-content: space-between;
+  }
+
+  .footer__title{
+    justify-self: right;
+  }
+
+  .footer__inputs{
+    flex-wrap: wrap;
+  }
+
+  .footer__input{
+    flex-basis: 100%;
+    margin:0;
+    margin-bottom: 16px;
+  }
+
+  .footer__submit{
+    margin-right: auto;
+    margin-left:0; /*así se pasa a la izquierda*/
+  }
+}
+
+
+
+/* Estilos para la sección del mapa */
+.mapita {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    width: 100%;
+    padding: 40px 20px; /* Espacio interno */
+    background-color: #f8f9fa; /* Color de fondo opcional */
+}
+
+.mapita iframe {
+    width: 100%;
+    max-width: 600px; /* Ancho máximo del mapa */
+    height: 450px;
+    border: 0;
+    border-radius: 8px; /* Bordes redondeados opcionales */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil opcional */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .mapita {
+        padding: 20px 10px;
+    }
+    
+    .mapita iframe {
+        height: 350px; /* Reducir altura en tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .mapita {
+        padding: 15px 5px;
+    }
+    
+    .mapita iframe {
+        height: 300px; /* Reducir altura en móviles */
+        border-radius: 4px;
+    }
+}

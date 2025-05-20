@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sicología</title>
+  <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <strong>Jessica Ratinoff</strong>
+    </div>
+    <div class="header-center">
+      <img src="./images/logo.png" alt="Logo">
+    </div>
+    <div class="header-right">
+      <strong>Sicología Clínica</strong>
+    </div>
+  </header>
+  
+  <!-- Aquí va el resto del contenido de tu página -->
+  <section class="banner">
+    <div class="banner-content">
+     <!-- <h1>Contáctanos</h1>-->
+      <!-- <a href="#">Programas</a> -->
+    </div>
+   </section>
+
+
+   <!-- Whatsapp-------------------------------- -->
+   <script>
+    var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?61400';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+    "enabled":true,
+    "chatButtonSetting":{
+        "backgroundColor":"#408601",
+        "ctaText":"Escríbenos",
+        "borderRadius":"25",
+        "marginLeft": "5",
+        "marginRight": "20",
+        "marginBottom": "20",
+        "ctaIconWATI":false,
+        "position":"left"
+    },
+    "brandSetting":{
+        "brandName":"Pilates y Fitness",
+        "brandSubTitle":"undefined",
+        "brandImg":"www.dooclub.cl",
+        "welcomeText":"¿Cómo te podemos ayudar?",
+        "messageText":"Hola, %0A Tengo una consulta:",
+        "backgroundColor":"#408601",
+        "ctaText":"Enviar mensaje",
+        "borderRadius":"25",
+        "autoShow":false,
+        "phoneNumber":"56974796287"
+    }
+    };
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
+   <!-- FIN WHATSAPP-------------------------------- -->
+
+
+
+
+   <main>
+
+   <!-- About-------------------------------- -->
+    <section class="container about">
+      <h2 class="subtitle">Sicología Clínica y Alternativa</h2>
+      <p class="about__paragraph"> Jessica Ratinoff, Psicóloga Clínica. Brinda un espacio de escucha y apoyo para tu bienestar emocional. Enfocada en generar cambios positivos y crecimiento personal.</p>
+
+      <div class="about__main">
+
+<article class="about__icons">
+          <img src="./images/regresiones.svg" class="about__icon">
+          <h3 class="about__title">Regresiones Reconstructivas</h3>
+          <p class="about__paragraph">Accede a recuerdos tempranos o prenatales para identificar la raíz de patrones actuales. En relajación profunda, explora vivencias pasadas para resignificarlas, liberar bloqueos emocionales y promover una sanación profunda en el presente.</p>
+        </article>
+
+        <article class="about__icons">
+          <img src="./images/group.svg" class="about__icon">
+          <h3 class="about__title">Constelaciones Familiares</h3>
+          <p class="about__paragraph">Terapia sistémica que revela dinámicas ocultas familiares mediante la representación espacial. Visibiliza lealtades invisibles y patrones, permitiendo tomar conciencia, encontrar un nuevo orden y restaurar el equilibrio liberando tensiones.</p>
+        </article>
+
+        <article class="about__icons">
+          <img src="./images/rebirthing.svg" class="about__icon">
+          <h3 class="about__title">Rebirthing</h3>
+          <p class="about__paragraph">Técnica de respiración profunda y conectada para liberar traumas y emociones reprimidas en el cuerpo. Facilita un flujo energético intenso que puede generar experiencias catárticas y renovar la vitalidad, conectando con la esencia y autosanación.</p>
+        </article>
+
+        <article class="about__icons">
+          <img src="./images/tft.svg" class="about__icon">
+          <h3 class="about__title">TFT</h3>
+          <p class="about__paragraph">Utiliza toques suaves en puntos específicos (similares a acupuntura) mientras el paciente se enfoca en un problema emocional. Se cree que equilibra la energía corporal, aliviando rápidamente emociones negativas como ansiedad, miedo o tristeza.</p>
+        </article>
+
+        <article class="about__icons">
+          <img src="./images/access.svg" class="about__icon">
+          <h3 class="about__title">Barras de Access Consciousness®</h3>
+          <p class="about__paragraph">Técnica suave que implica tocar 32 puntos en la cabeza donde se almacenan pensamientos y emociones. Activar estas "barras" libera patrones limitantes y creencias arraigadas, facilitando conciencia, claridad mental y apertura a nuevas posibilidades.</p>
+        </article>
+
+      </div>
+    </section>
+
+   <!-- Knowledge-------------------------------- -->
+
+
+    <section class="knowledge">
+      <div class="knowledge__container container">
+        <div class="knowledge__texts">
+          <h2 class="subtitle">Consultas Online o Presenciales</h2>
+          <p class="knowledge__paragraph">Jessica Ratinoff, psicóloga clínica con 30 años de experiencia en familias, ofrece consultas tanto presenciales como online. Su enfoque busca fortalecer los lazos afectivos, resolver conflictos y promover la armonía para el bienestar de todos los miembros del sistema familiar, adaptándose a tus necesidades.</p>
+          <a href="#" class="cta">Toma tu hora</a>
+        </div>
+
+        <figure class="knowledge__picture">
+          <img src="./images/05.jpg" class="knowledge__img">
+        </figure>
+
+      </div>
+    </section>
+
+
+
+
+   <!-- Precios -------------------------------- -->
+
+    <section class="price container">
+
+      <h2 class="subtitle">Valores de sesiones</h2>
+
+
+      <div class="price__table">  <!-- contenedor de las tablas, setear padding top en .price_table (wrap para desborde, padding, flexbox con gap, etc.) -->
+
+        <!-- caja 1 -->
+        <div class="price__element">
+          <!--<p class="price__name">Clase Grupal</p>-->
+          <h3 class="price__price">$20.000</h3>
+
+          <div class="price__items">
+            <p class="price__features">4 consultas</p>
+            <p class="price__features">$40.000 la sesión</p>
+            <p class="price__features">Técnica A</p>
+          </div>
+
+          <a href="#" class="price__cta">Consulta Individual</a>
+        </div>
+
+        <!-- caja 2 BEST -->
+        <div class="price__element price__element--best">
+          <!--<p class="price__name">Clase Grupal</p> -->
+          <h3 class="price__price">$40.000</h3>
+
+          <div class="price__items">
+            <p class="price__features">4 consultas</p>
+            <p class="price__features">$50.000 cada clase</p>
+            <p class="price__features">Regresión</p>
+          </div>
+
+          <a href="#" class="price__cta">Consulta Parejas</a>
+        </div>
+
+        <!-- caja 3 -->
+        <div class="price__element">
+          <h3 class="price__price">$50.000</h3>
+
+          <div class="price__items">
+            <p class="price__features">8 sesiones</p>
+            <p class="price__features">Sesiones con ABC</p>
+            <p class="price__features">Constelaciones</p>
+          </div>
+
+          <a href="#" class="price__cta">Consulta privada</a>
+        </div>
+
+        <!-- caja 4 -->
+        <div class="price__element">
+          <h3 class="price__price">$70.000</h3>
+
+          <div class="price__items">
+            <p class="price__features">10 sesiones</p>
+            <p class="price__features">Remoto zoom</p>
+            <p class="price__features">Rebirthing</p>
+          </div>
+
+          <a href="#" class="price__cta">Consulta Privadas</a>
+        </div>
+
+
+      <div class="price__table">  <!-- contenedor de las tablas, setear padding top en .price_table (wrap para desborde, padding, flexbox con gap, etc.) -->
+
+        <!-- caja 1 -->
+        <div class="price__element">
+          <h3 class="price__price">$40.000</h3>
+
+          <div class="price__items">
+            <p class="price__features">Lunes - Miércoles</p>
+            <p class="price__features">20:00 hrs</p>
+            <p class="price__features">TFT</p>
+          </div>
+
+          <a href="#" class="price__cta">TFT</a>
+        </div>
+
+        <!-- caja 2 BEST -->
+        <div class="price__element">
+          <h3 class="price__price">$20.000</h3>
+
+          <div class="price__items">
+            <p class="price__features">Una vez por semana</p>
+            <p class="price__features">20:00 hrs</p> 
+            <p class="price__features">Mejor opción</p>
+          </div>
+
+          <a href="#" class="price__cta">Consulta Adlescentes</a>
+        </div>
+
+
+    </section>
+
+
+   
+
+<section class="horarios">
+    <br>
+    <h2>Horarios disponibles</h2>
+    <br>
+    <div class="horarios__texts">
+        <p>LUNES</p>
+        <p>10:00 - 12:00 hrs</p>
+        <p>15:00 - 18:00 hrs</p>
+        <br>
+        <p>MARTES</p>
+        <p>10:00 - 12:00 hrs</p>
+        <p>15:00 - 18:00 hrs</p>
+        <br>
+        <p>MIÉRCOLES</p>
+        <p>10:00 - 12:00 hrs</p>
+        <p>15:00 - 18:00 hrs</p>
+        <br>
+        <p>JUEVES</p>
+        <p>10:00 - 12:00 hrs</p>
+        <p>15:00 - 18:00 hrs</p>
+        <br>
+        <p>VIERNES</p>
+        <p>10:00 - 12:00 hrs</p>
+        <p>15:00 - 18:00 hrs</p>
+        <br>
+        <br>
+        <br>
+    </div>
+</section>
+
+    
+    
+    
+    <!-- Preguntas frecuentes-------------------------------- -->
+
+    <section class="questions container">
+      <h2 class="subtitle">Preguntas frecuentes</h2>
+
+      <section class="questions__container">
+
+        <article class="questions__padding">
+          <div class="questions__answer">
+            <h3 class="questions__title">¿En cuánto tiempo veré resultados?
+              <span class="questions__arrow">
+                <img src="./images/arrow.svg" class="questions__img">
+              </span>
+            </h3>
+            <p class="questions__show">Es importante recordar que los resultados de la terapia psicológica varían significativamente entre individuos. El compromiso personal, la naturaleza de los desafíos y la relación terapéutica son factores clave. Jessica Ratinoff ofrece un espacio profesional y dedicado, pero la evolución y los logros dependen de cada proceso individual y su contexto particular.</p>
+          </div>
+        </article>
+
+        <article class="questions__padding">
+          <div class="questions__answer">
+            <h3 class="questions__title">¿Es la sicologia clinica adecuada para mí?
+              <span class="questions__arrow">
+                <img src="./images/arrow.svg" class="questions__img">
+              </span>
+            </h3>
+            <p class="questions__show">La psicología puede ser una herramienta valiosa para explorar tus pensamientos, emociones y comportamientos, ofreciendo perspectivas y estrategias para afrontar desafíos y promover el bienestar. Sin embargo, la idoneidad depende de tus necesidades y objetivos individuales. ¿Qué te lleva a considerar la psicología en este momento? Compartir un poco más podría ayudar a determinar si es el camino adecuado para ti.
+          </div>
+        </article>
+
+        <article class="questions__padding">
+          <div class="questions__answer">
+            <h3 class="questions__title">Políticas de la profesional
+              <span class="questions__arrow">
+                <img src="./images/arrow.svg" class="questions__img">
+              </span>
+            </h3>
+            <p class="questions__show">
+
+              ** Exclusivamente 18 años o más excepto autorización **<br>
+                •	Se excluyen embarazadas y menores de 18 años.<br>
+                •	Las sesiones se entregan calendarizadas.<br>
+                •	Las sesiones no asistidas, NO se recuperan.<br>
+                •	Las sesiones NO se congelan.<br>
+                •	Sólo se reservan cupos previo pago. <br>
+                •	Esta reserva deberá tener una fecha de inicio, la cual NO puede variar. <br>            
+                •	NO se devuelve el dinero.<br>
+                •	El primer pago es vía transferencia, los siguientes séran PRESENCIALES, transferencia presencial, cheque o efectivo.<br>
+                •	Este sistema de pagos y reservas NO considera la devolución de dineros.<br>
+              <br><br>
+
+              Jessica Ratinoff<br>
+              Sicóloga clínica</p>
+          </div>
+        </article>                
+       
+      </section>
+
+
+
+    <!-- Questions Offer -------------------------------- -->
+
+    <section class="questions__offer">
+        <h2 class="subtitle">Cauquenes 60, Ñuñoa, Santiago</h2>
+        <!--
+        <p class="questions__copy">Suscríbete hoy mismo y descubre por qué el Pilates es la elección perfecta para mantenerte en forma, sentirte más enérgico y alcanzar tu máximo potencial. ¡Te esperamos en el gimnasio para empezar este viaje hacia una versión más fuerte y equilibrada de ti mismo!</p>
+        -->
+        <a href="#" class="cta">Toma tu hora!</a>
+    </section>
+
+
+   <!-- Google maps -------------------------------- -->
+  <section class="mapita">
+      <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.784446495127!2d-70.5787709235213!3d-33.454921973387655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf5ee2054725%3A0xe612ef4af75b25a0!2sCauquenes%2060%2C%207760014%20%C3%91u%C3%B1oa%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses-419!2scl!4v1747625494661!5m2!1ses-419!2scl" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación - Cauquenes 60, Ñuñoa">
+      </iframe>
+  </section>
+
+
+  </main>
+
+
+  <!-- Footer -------------------------------- -->
+
+  <footer class="footer">
+    <section class="footer__container container">
+      <nav class="nav nav--footer">
+        <h2 class="footer__title">Novedades y actualizaciones</h2>
+
+        <ul class="nav__link nav__link--footer">
+
+        </ul>
+      </nav>
+
+      <form class="footer__form">
+        <h2 class="footer__newsletter">Suscribete al newsletter</h2>
+        <div class="footer__inputs">
+          <input type="email" placeholder="Email:" class="footer__input">
+          <input type="submit" value="Registro" class="footer__submit"> 
+        </div> 
+      </form>
+    </section>
+
+    <!-- Iconos RRSS -->
+
+    <section class="footer__copy container">
+      <div class="footer__social">
+        <a href="#" class="footer__icons"><img src="./images/facebook.svg" class="footer__img"></a>
+        <a href="#" class="footer__icons"><img src="./images/twitter.svg" class="footer__img"></a>
+        <a href="#" class="footer__icons"><img src="./images/youtube.svg" class="footer__img"></a>
+      </div>
+
+      <h3 class="footer__copyright">Derechos reservados &copy; Jessica Ratinoff 2025</h3>
+    </section>
+  </footer>
+
+  <script src="./js/slider.js"></script>
+  <script src="./js/questions.js"></script>
+  <script src="./js/menu.js"></script>
+
+</body>
+
+</html>
