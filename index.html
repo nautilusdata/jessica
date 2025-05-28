@@ -39,36 +39,36 @@
 
 
    <!------------------------------- Whatsapp-------------------------------- -->
-   <script>
+<script>
     var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?61400';
     var s = document.createElement('script');
     s.type = 'text/javascript';
     s.async = true;
     s.src = url;
     var options = {
-    "enabled":true,
-    "chatButtonSetting":{
-        "backgroundColor":"#408601",
-        "ctaText":"Escríbenos",
-        "borderRadius":"25",
-        "marginLeft": "5",
-        "marginRight": "20",
-        "marginBottom": "20",
-        "ctaIconWATI":false,
-        "position":"left"
-    },
-    "brandSetting":{
-        "brandName":"Pilates y Fitness",
-        "brandSubTitle":"undefined",
-        "brandImg":"www.dooclub.cl",
-        "welcomeText":"¿Cómo te podemos ayudar?",
-        "messageText":"Hola, %0A Tengo una consulta:",
-        "backgroundColor":"#408601",
-        "ctaText":"Enviar mensaje",
-        "borderRadius":"25",
-        "autoShow":false,
-        "phoneNumber":"56974796287"
-    }
+        "enabled":true,
+        "chatButtonSetting":{
+            "backgroundColor":"#25D366", // Color verde WhatsApp estándar
+            "borderRadius":"50", // Para que sea un círculo perfecto
+            "marginLeft": "5",
+            "marginRight": "20",
+            "marginBottom": "20",
+            "ctaText":"", // Deja vacío para no mostrar texto
+            "ctaIconWATI":false, // Asegúrate de que esto sea 'false'
+            "position":"left"
+        },
+        "brandSetting":{
+            "brandName":"Psicología",
+            "brandSubTitle":"undefined",
+            "brandImg":"www.dooclub.cl", // Puedes mantener o cambiar esto
+            "welcomeText":"¿Cómo te podemos ayudar?",
+            "messageText":"Hola, %0A Tengo una consulta:",
+            "backgroundColor":"#25D366", // Color verde WhatsApp estándar
+            "ctaText":"Enviar mensaje",
+            "borderRadius":"25",
+            "autoShow":false,
+            "phoneNumber":"56974796287"
+        }
     };
     s.onload = function() {
         CreateWhatsappChatWidget(options);
@@ -87,7 +87,7 @@
 
     <section class="container about">
       <!-- <h2 class="subtitle">Sicología Clínica y Alternativa</h2> -->
-      <p class="about__paragraph"> Jessica Ratinoff, Psicóloga Clínica. Brinda un espacio de escucha y apoyo para tu bienestar emocional. Enfocada en generar cambios positivos y crecimiento personal.</p>
+      <p class="about__paragraph"> Jessica Ratinoff, Psicóloga Clínica, brinda un espacio de escucha y apoyo para tu bienestar emocional. Enfocada en generar cambios positivos y crecimiento personal.</p>
 
       <div class="about__main">
       <h3 class="subtitle">Herramientas o Recursos Terapéuticos</h3>
@@ -327,7 +327,7 @@
               <br><br>
 
               Jessica Ratinoff<br>
-              Sicóloga clínica</p>
+              Psicóloga clínica</p>
           </div>
         </article>                
        
