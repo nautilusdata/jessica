@@ -124,12 +124,19 @@ a{
 
   /* Estilos para el contenedor del título "Herramientas o Recursos Terapéuticos" */
   .about__title-wrapper {
-    width: 100%; /* Ocupa todo el ancho disponible */
-    text-align: center; /* Centra el texto horizontalmente */
-    margin-top: 60px; /* Espacio superior para separarlo del párrafo anterior */
-    margin-bottom: 10px; /* Espacio inferior para separarlo de los íconos */
+    background-color: white; /* ¡Esto es clave para el fondo blanco! */
+    text-align: center;
+    width: 100%;
+    margin-top: 40px; /* Ajusta según el espacio que quieras */
+    margin-bottom: 30px; /* Ajusta según el espacio que quieras */
+    padding: 20px 0; /* Para que el fondo blanco se vea bien alrededor del título */
   }
-
+  
+  .intro-section {
+    background-color: var(--color-pastel-background); /* El gris claro */
+    padding: 30px 20px;
+    margin-bottom: 20px;
+  }
   .about__title-wrapper .subtitle {
     font-size: 2.0rem; /* Ajusta el tamaño de fuente para el título */
     color: #333; /* Un color de texto oscuro */
