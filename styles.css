@@ -42,7 +42,10 @@ a{
 .header-center img {
   max-width: 100%;
   height: auto;
-  max-height: 250px;
+  max-height: 250px; /* Mantén tu altura máxima original si la deseas */
+  transform: scale(1.15); /* Aumenta el tamaño del logo un 15% */
+  transform-origin: center center; /* Asegura que se escala desde el centro */
+  transition: transform 0.3s ease-in-out; /* Opcional: para una transición suave si el tamaño cambia dinámicamente */
 }
 
 .header-right {
