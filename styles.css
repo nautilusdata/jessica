@@ -174,28 +174,28 @@ a{
 /* Fotos loop Hero */
 @keyframes banner{
   0%{
-    background-image: url('./images/people1.png');
+    background-image: url('./images/hartagente.jpg');
   }
   25%{
-    background-image: url('./images/people1.png');
+    background-image: url('./images/hartagente.jpg');
   }
   26%{
-    background-image: url('./images/15.jpg');
+    background-image: url('./images/musicos.jpg');
   }
   50%{
-    background-image: url('./images/15.jpg');
+    background-image: url('./images/musicos.jpg');
   }
   51%{
-    background-image: url('./images/01.jpg');
+    background-image: url('./images/profe.jpg');
   }
   75%{
-    background-image: url('./images/01.jpg');
+    background-image: url('./images/profe.jpg');
   }
   76%{
-    background-image: url('./images/13.jpg');
+    background-image: url('./images/oficina.jpg');
   }
   100%{
-    background-image: url('./images/13.jpg');
+    background-image: url('./images/oficina.jpg');
   }
 }
 
