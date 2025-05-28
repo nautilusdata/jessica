@@ -6,7 +6,7 @@
   --color-pastel-accent: #a7c957; /* Verde pastel */
   --color-pastel-secondary: #f2e9e4; /* Beige claro */
   --color-pastel-button: #aad4cf; /* Azul verdoso pastel */
-  --color-pastel-background: #f9f9f9; /* Gris muy claro para fondos de sección */
+  --color-pastel-background: #eeeeee; /* Gris muy claro para fondos de sección */
 }
 
 body{
@@ -25,7 +25,7 @@ a{
 .header {
   display: flex;
   min-height: 40px;
-  max-height: 150px;
+  max-height: 300px;
   background-color: #ffffff;
   justify-content: space-between;
   align-items: center;
@@ -42,7 +42,7 @@ a{
 .header-center img {
   max-width: 100%;
   height: auto;
-  max-height: 250px;
+  max-height: 288px;
 }
 
 .header-right {
@@ -128,7 +128,7 @@ a{
     text-align: center;
     width: 100%;
     margin-top: 40px; /* Ajusta según el espacio que quieras */
-    margin-bottom: 30px; /* Ajusta según el espacio que quieras */
+    margin-bottom: 15px; /* Ajusta según el espacio que quieras */
     padding: 20px 0; /* Para que el fondo blanco se vea bien alrededor del título */
   }
   
@@ -147,7 +147,6 @@ a{
   @media (max-width: 768px) {
     .about__title-wrapper .subtitle {
       font-size: 1.5rem; /* Reduce el tamaño de fuente para pantallas más pequeñas */
-      padding: 0 15px; /* Añade un poco de padding horizontal si es necesario */
     }
   }
 
@@ -161,18 +160,17 @@ a{
   background-size: cover;
   background-position: center;
   transition: all .1s ease-in-out;
-  background-image: url('./images/01.jpg');
+  background-image: url('./images/hartagente.jpg');
   animation: banner 48s infinite linear;
 }
 
 .banner-content{
   margin:0;
   padding:0;
-  width: 100%; /*100% abarca todo el contenedor principal clase .banner*/
-  height: 190%;/*Letras abajo*/
-  color: var(--color-pastel-accent); /* Verde pastel para el texto del banner */
-  background-color: rgba(74, 87, 76,0.1); /*Ajuste de imágenes HERO*/
-  display: flex; /*banner content se comportará tipo flex*/
+  width: 100%;
+  color: var(--color-pastel-accent);
+  background-color: rgba(74, 87, 76,0.1);
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -268,7 +266,7 @@ a{
 }
 
 .about__main {
-  padding-top: 80px;
+  padding-top: 0px;
   display: grid;
   width: 90%;
   margin: 0 auto;
