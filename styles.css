@@ -123,25 +123,33 @@ a{
 
 
   /* Estilos para el contenedor del título "Herramientas o Recursos Terapéuticos" */
-  .about__title-wrapper {
-    background-color: white; /* ¡Esto es clave para el fondo blanco! */
-    text-align: center;
-    width: 100%;
-    margin-top: 40px; /* Ajusta según el espacio que quieras */
-    margin-bottom: 15px; /* Ajusta según el espacio que quieras */
-    padding: 20px 0; /* Para que el fondo blanco se vea bien alrededor del título */
-  }
+ .about__title-wrapper {
+  background-color: #ffffff; /* Use hex code for absolute clarity */
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  padding: 20px 0;
+  /* Add these for extra robustness: */
+  box-sizing: border-box; /* Ensures padding is included in width/height */
+  position: relative; /* Sometimes helps with z-index and stacking contexts */
+  z-index: 2; /* Ensure it's above any potential overlapping elements */
+  overflow: hidden; /* Prevent its own content from overflowing */
+}
   
   .intro-section {
     background-color: var(--color-pastel-background); /* El gris claro */
     padding: 30px 20px;
     margin-bottom: 20px;
   }
+  
+/* Also, let's make sure the subtitle itself doesn't have any strange background or clips */
   .about__title-wrapper .subtitle {
-    font-size: 2.0rem; /* Ajusta el tamaño de fuente para el título */
-    color: #333; /* Un color de texto oscuro */
-    /* Puedes añadir más estilos si lo necesitas, como padding, border, etc. */
-  }
+  font-size: 2.0rem;
+  color: #333;
+  line-height: 1.2; /* Ensure line height is adequate, sometimes text can clip */
+  display: block; /* Make sure it behaves like a block element within its container */
+}
 
   /* Media query para dispositivos más pequeños (smartphones) */
   @media (max-width: 768px) {
