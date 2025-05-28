@@ -21,105 +21,98 @@ a{
 }
 
 
-/* Estilos generales para el encabezado */
+/* Estilos generales para el encabezado (Desktop First) */
 .header {
   display: flex;
-  min-height: 40px;
-  max-height: 300px;
   background-color: #ffffff;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+  justify-content: space-between; /* Distribuye los 3 elementos */
+  align-items: center; /* Centra los 3 elementos verticalmente como grupo */
+  padding: 10px 20px; /* <--- AJUSTA ESTE padding en PC: controlará la altura general */
   color: rgb(6, 7, 66);
 }
 
-.header-left {
-  flex: 1;
-  font-size: 1.5em;
-  text-align: center;
-}
-
-.header-center img {
-  max-width: 100%;
-  height: auto;
-  max-height: 288px;
-}
-
+.header-left,
 .header-right {
-  flex: 1;
   font-size: 1.5em;
   text-align: center;
-}
-
-/* Estilos generales del encabezado (sin cambios) */
-.header {
   display: flex;
-  min-height: 40px;
-  max-height: 300px;
-  background-color: #ffffff;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  color: rgb(6, 7, 66);
+  align-items: center; /* Centra el texto verticalmente dentro de su columna */
+  justify-content: center; /* Centra el texto horizontalmente dentro de su columna */
+  flex: 1; /* Permite que estas columnas crezcan y empujen el centro. Esto es clave para el centrado del texto en PC. */
+  margin: 0 10px; /* Pequeño margen para separar de los bordes o del logo */
 }
 
-.header-left {
-  flex: 1;
-  font-size: 1.5em;
-  text-align: center;
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 0;   /* No crece */
+  flex-shrink: 0; /* No se encoge */
+  flex-basis: auto; /* Su tamaño se basa en el contenido (el logo) */
+  /* NO pongas un max-width fijo aquí a menos que sea absolutamente necesario, el flex-basis: auto debería ser suficiente. */
 }
 
 .header-center img {
-  max-width: 100%;
+  width: auto; /* Dejar que la imagen se ajuste a su tamaño real o al max-height */
   height: auto;
-  max-height: 288px;
+  max-height: 200px; /* <--- AJUSTA ESTE VALOR para el tamaño deseado del logo en PC */
+                      /* Prueba con 90px, 100px, 110px, 120px... */
+  display: block;
+  margin: 0;
+  object-fit: contain; /* Asegura que la imagen se vea completa */
 }
 
-.header-right {
-  flex: 1;
-  font-size: 1.5em;
-  text-align: center;
-}
 
-/* Media query para pantallas de hasta 768px de ancho (móviles y tablets) */
+/* --- Media Queries para smartphone --- */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column; /* Mantenemos la dirección de columna */
-    align-items: center;
-    text-align: center;
-    padding: 10px; /* Reducimos el padding general */
-    min-height: auto;
-    max-height: none;
-    justify-content: space-around; /* Distribuimos el espacio vertical */
+    flex-direction: column; /* Apila los elementos */
+    max-height: 150; /* Que el header no tenga límite de altura en móvil */
+    padding: 15px 10px; /* <--- AJUSTA ESTE padding vertical en móvil. Controla el espacio arriba/abajo del grupo. */
+    justify-content: center; /* Centra los elementos apilados en el medio del header */
   }
 
   .header-left {
+    flex: none; /* En móvil, no flexiona en ancho */
+    width: 100%;
+    margin-bottom: 10px; /* <--- AJUSTA ESTE MARGEN para separar Jessica del logo */
     font-size: 1.2em;
+    margin-top: 0;
+  }
+
+  .header-center {
+    flex: none; /* No flexiona en móvil */
+    max-width: none; /* Asegura que el contenedor del logo no esté limitado por un ancho fijo aquí */
+    margin-bottom: 10px; /* <--- AJUSTA ESTE MARGEN para separar el logo de Psicología Clínica */
   }
 
   .header-center img {
-    max-height: 200px;
+    max-height: 130px; /* <--- AJUSTA ESTE VALOR para el tamaño deseado del logo en TABLET/MÓVIL */
+                       /* Sube o baja hasta que el logo se vea bien. */
   }
 
   .header-right {
+    flex: none;
+    width: 100%;
+    margin-bottom: 0;
     font-size: 1.2em;
+    margin-top: 0;
   }
 }
 
-/* Media query para pantallas aún más pequeñas (móviles pequeños) */
 @media (max-width: 480px) {
-  .header-left {
-    font-size: 1em;
-  }
-
-  .header-right {
-    font-size: 1em;
-  }
-
   .header-center img {
-    max-height: 150px;
+    max-height: 130px; /* <--- AJUSTA ESTE VALOR para el tamaño deseado del logo en MÓVIL PEQUEÑO */
   }
+  /* Si necesitas ajustar márgenes para 480px, hazlo aquí también */
+  .header-left { margin-bottom: 8px; }
+  .header-center { margin-bottom: 8px; }
 }
+
+
+
+
+
 
 
   /* Estilos para el contenedor del título "Herramientas o Recursos Terapéuticos" */
@@ -142,7 +135,7 @@ a{
     padding: 30px 20px;
     margin-bottom: 20px;
   }
-  
+
 /* Also, let's make sure the subtitle itself doesn't have any strange background or clips */
   .about__title-wrapper .subtitle {
   font-size: 2.0rem;
@@ -221,16 +214,16 @@ a{
     background-image: url('./images/musicos.jpg');
   }
   51%{
-    background-image: url('./images/profe.jpg');
+    background-image: url('./images/lago-cerros.png');
   }
   75%{
-    background-image: url('./images/profe.jpg');
+    background-image: url('./images/lago-cerros.png');
   }
   76%{
-    background-image: url('./images/oficina.jpg');
+    background-image: url('./images/vicissitudes1.jpg');
   }
   100%{
-    background-image: url('./images/oficina.jpg');
+    background-image: url('./images/vicissitudes1.jpg');
   }
 }
 
